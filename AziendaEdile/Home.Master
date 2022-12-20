@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="AziendaEdile.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="stile.css" rel="stylesheet" />
+    <title>Azienda Edile</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+            <div class="container">
+                <a class="navbar-brand" href="Default.aspx">EDILIZIA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Default.aspx">Home | Lista Dipendenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ArchiviaDipendente.aspx">Archivia Dipendente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="RegistraPagamento.aspx">Registra Pagamento</a>
+                        </li>
+                    </ul>
+<%--                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-10">
+                                <asp:TextBox ID="TextBox_Cerca" CssClass="form-control " placeholder="Cerca un Dipendente" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-2">
+                                <asp:Button ID="Button_Cerca" CssClass="btn btn-secondary " OnClick="Button_Cerca_Click" runat="server" Text="Cerca" />
+                            </div>
+                        </div>
+                    </div>--%>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="Scripts/bootstrap.js"></script>
+</body>
+</html>
