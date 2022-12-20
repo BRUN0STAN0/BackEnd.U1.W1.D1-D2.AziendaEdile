@@ -25,7 +25,7 @@ namespace AziendaEdile
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.AddWithValue("CERCA", TextBox_CercaDipendente.Text);
-                cmd.CommandText = "SELECT * FROM Dipendente WHERE Nome = @CERCA OR Cognome = @CERCA";
+                cmd.CommandText = $"SELECT * FROM Dipendente WHERE Nome LIKE '%@{TextBox_CercaDipendente.Text}%' OR Cognome LIKE '%{TextBox_CercaDipendente.Text}%'";
                 cmd.Connection = con;
                 SqlDataReader reader = cmd.ExecuteReader();
 
